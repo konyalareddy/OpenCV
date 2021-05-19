@@ -41,7 +41,7 @@ def capture_image():
     if not ret:
         print("failed to grab frame")
 
-    name = "images/" + time.strftime("%Y%m%d-%H%M%S") + ".png"
+    name = time.strftime("%Y%m%d-%H%M%S") + ".png"
     print(name)
 
     cv2.imwrite(name, frame)
@@ -80,7 +80,7 @@ if __name__ == '__main__':
             if not ret:
                 print("failed to grab frame")
 
-            name = "images/" + time.strftime("%Y%m%d-%H%M%S") + ".png"
+            name =  time.strftime("%Y%m%d-%H%M%S") + ".png"
             # path_to = 'C:\\Users\\k64096478\\Work\\DataCollection'
             # save_directory = os.path.join(path_to, name)
             print(name)

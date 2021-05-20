@@ -7,7 +7,7 @@ from timeloop import Timeloop
 import time
 import os
 from time import sleep
-
+from light_bh1750 import readLight
 # set recording duration
 record_time = 20
 
@@ -89,7 +89,8 @@ if __name__ == '__main__':
 
             #capture_image()
             times = 0
-        # sleep(0.1)
+            print("Light  "+ time.strftime("%Y%m%d-%H%M%S") +str(readLight()))
+        sleep(1)
 
     close_cam(cap)
 
